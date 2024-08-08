@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Submit Feedback - Clothing E-Commerce</title>
+    <style>
+        header {
+            background-color: #a4e3e6;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+        nav a:hover {
+            background-color: #85c7cc;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Submit Feedback</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+            <a href="feedback.html">Submit Feedback</a>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="feedback">
+            <h2>Submit Feedback</h2>
+            <p>We value your feedback! Please share your thoughts with us:</p>
+            <form id="feedbackForm" action="#" method="post">
+                <label for="feedback">Your Feedback:</label><br>
+                <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br>
+                <input type="submit" value="Submit Feedback">
+            </form>
+        </section>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Hide the feedback form initially
+            $("#feedbackForm").hide();
+
+            // Fade in the feedback form
+            $("#feedbackForm").fadeIn(2000);
+
+            // Change the style of text when focusing on the textarea
+            $("#feedback").focus(function() {
+                $(this).css({
+                    "font-style": "italic",
+                    "color": "blue",
+                    "border": "2px solid #a4e3e6"
+                });
+            });
+
+            // Revert text style when the textarea loses focus
+            $("#feedback").blur(function() {
+                $(this).css({
+                    "font-style": "normal",
+                    "color": "black",
+                    "border": "1px solid #ccc"
+                });
+            });
+        });
+    </script>
+</body>
+</html>

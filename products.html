@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Products - StyleHub Clothing</title>
+    <link rel="stylesheet" href="styles-products.css">
+</head>
+<body>
+    <header>
+        <h1>Our Products</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="products">
+            <h2>Products</h2>
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td><img src="img/prod1.png" alt="Product 1"></td>
+                    <td>High-quality shirt made of cotton.</td>
+                    <td>₹899.00</td>
+                    <td><input type="number" id="quantity1" value="1" min="1"></td>
+                    <td>
+                        <button onclick="buyProduct('Product 1', 899, 'quantity1')">Buy Now</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="img/prod2.png" alt="Product 2"></td>
+                    <td>Elegant dress perfect for any occasion.</td>
+                    <td>₹2699.00</td>
+                    <td><input type="number" id="quantity2" value="1" min="1"></td>
+                    <td>
+                        <button onclick="buyProduct('Product 2', 2699, 'quantity2')">Buy Now</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="img/prod3.png" alt="Product 3"></td>
+                    <td>Loose Fit Denim worker jacket.</td>
+                    <td>₹3499.00</td>
+                    <td><input type="number" id="quantity3" value="1" min="1"></td>
+                    <td>
+                        <button onclick="buyProduct('Product 3', 3499, 'quantity3')">Buy Now</button>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+
+    <script>
+        function buyProduct(productName, price, quantityId) {
+            var quantity = document.getElementById(quantityId).value;
+            var totalPrice = price * quantity;
+            alert('You are buying ' + quantity + ' of ' + productName + '. Total price is ₹' + totalPrice + '.');
+            
+        
+        }
+    </script>
+</body>
+</html>
